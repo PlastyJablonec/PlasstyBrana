@@ -1,4 +1,22 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/mqtt-proxy.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "api/test.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
   "functions": {
     "api/mqtt-proxy.js": {
       "runtime": "nodejs18.x"
