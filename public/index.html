@@ -105,8 +105,11 @@
     <meta name="msapplication-TileColor" content="#3b82f6">
     <meta name="msapplication-config" content="%PUBLIC_URL%/browserconfig.xml">
     
-    <!-- Service Worker Registration -->
+    <!-- Service Worker Registration - DISABLED TEMPORARILY -->
     <script>
+      // Service Worker temporarily disabled for debugging
+      console.log('Service Worker disabled for debugging');
+      /*
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js')
@@ -118,6 +121,7 @@
             });
         });
       }
+      */
     </script>
   </head>
   <body>
