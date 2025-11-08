@@ -1,6 +1,8 @@
 // Vercel API endpoint for MQTT proxy
-export default function handler(req, res) {
+module.exports = (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   
   const data = {
     gateStatus: 'Brána zavřena',
@@ -12,4 +14,4 @@ export default function handler(req, res) {
   };
   
   res.status(200).json(data);
-}
+};
