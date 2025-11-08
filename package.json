@@ -65,7 +65,7 @@
   },
   "vercel": {
     "functions": {
-      "api/mqtt-proxy.ts": {
+      "api/mqtt-proxy.js": {
         "runtime": "nodejs18.x"
       }
     },
